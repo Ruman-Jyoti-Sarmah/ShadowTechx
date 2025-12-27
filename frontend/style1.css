@@ -88,14 +88,44 @@ p {
     }
 }
 
-@media (min-width: 1024px) {
+/* Large Desktops */
+@media screen and (min-width: 1200px) {
     h1 {
-        font-size: 5em;
+        font-size: 6em;
     }
     p {
-        font-size: 1.8em;
+        font-size: 2em;
     }
     .cta-button {
-        padding: 18px 36px;
+        padding: 20px 40px;
+    }
+}
+
+/* Tablets and Small Laptops */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4.5em;
+    }
+    p {
+        font-size: 1.6em;
+    }
+    .cta-button {
+        padding: 16px 32px;
+    }
+}
+
+/* Tablet Landscape (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 3.2em;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 1.3em;
+        text-transform: uppercase;
+    }
+    .cta-button {
+        font-size: 1.1em;
+        text-transform: uppercase;
     }
 }
