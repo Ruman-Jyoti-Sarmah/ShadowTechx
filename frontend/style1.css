@@ -56,3 +56,46 @@ p {
 .cta-button:hover {
     background-color: #0096ff;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    p {
+        font-size: 1.2em;
+    }
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+        margin-bottom: 1.5em;
+    }
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .content {
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 5em;
+    }
+    p {
+        font-size: 1.8em;
+    }
+    .cta-button {
+        padding: 18px 36px;
+    }
+}

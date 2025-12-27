@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } catch (err) {
             console.error('Network error:', err);
-            showMessage('Connection Error: Could not reach the server. Is Node.js running on port 5000?', 'error');
+            showMessage('Connection Error: Could not reach the server. Is the Laravel backend running on port 8000?', 'error');
         } finally {
             submitButton.disabled = false;
             submitButton.textContent = 'Launch Consultation';
