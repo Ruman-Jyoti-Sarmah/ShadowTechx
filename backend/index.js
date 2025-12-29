@@ -11,26 +11,26 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 const allowedOrigins = [
-  'http://127.0.0.1:5500',
-  'http://localhost:5500',
-  'http://127.0.0.1:3000',
+  'https://shadow-techx.vercel.app', 
   'http://localhost:3000',
-  'http://127.0.0.1',
-  'http://localhost',
-  'http://localhost:5000'
+  'http://localhost:5500'
 ];
+
 
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
-        callback(new Error(`Not allowed by CORS: ${origin}`), false);
+        callback(new Error('Not allowed by CORS'));
       }
     }
   })
 );
+
 
 // Routes
 app.get('/', (req, res) => {
