@@ -7,17 +7,18 @@ import contactRoutes from './routes/contactRoutes.js';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
+// Body parser
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
+// Allowed frontend origins
 const allowedOrigins = [
-  'https://shadow-tech-backend.onrender.com/api/contact',
-  'https://shadow-techx.vercel.app', 
+  'https://shadow-techx.vercel.app',
   'http://localhost:3000',
   'http://localhost:5500'
 ];
 
-
+// CORS
 app.use(
   cors({
     origin: (origin, callback) => {
@@ -32,25 +33,23 @@ app.use(
   })
 );
 
-
-// Routes
+// Test route
 app.get('/', (req, res) => {
-  res.status(200).json({ message: 'ShadowTech Backend API is running and connected to DB.' });
+  res.status(200).json({
+    message: 'ShadowTech Backend API is running and connected to DB.'
+  });
 });
 
-app.use('/api', contactRoutes);
+// Contact route
+app.use('/contact', contactRoutes);
 
-// Connect to MongoDB
+// MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log('✅ MongoDB Connected Successfully'))
-  .catch(err => {
-    console.error('❌ MongoDB Connection Error:', err.message);
-    console.error('URI:', process.env.MONGO_URI);
-    // Don't exit—let the server run so we can debug
-  });
+  .catch(err => console.error('❌ MongoDB Error:', err.message));
 
-// Start Server
+// Server
 app.listen(PORT, () => {
-  console.log(` ShadowTech Backend Server running on http://localhost:${PORT}/`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
