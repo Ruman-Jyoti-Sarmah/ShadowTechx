@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 const allowedOrigins = [
+  'https://shadow-tech-backend.onrender.com/api/contact',
   'https://shadow-techx.vercel.app', 
   'http://localhost:3000',
   'http://localhost:5500'
