@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'https://shadow-tech-backend.onrender.com/contact';
+    const apiUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? 'http://localhost:5000/contact'
+        : 'https://shadow-tech-backend.onrender.com/contact';
 
     const form = document.getElementById('contact-form');
     const messageElement = document.getElementById('form-message');

@@ -1,86 +1,43 @@
-// models/Contact.js - cleaned
-// const mongoose = require('mongoose');
-
-// // Define the schema for a new contact form submission (a "Lead")
-// const contactSchema = new mongoose.Schema({
-//     name: {
-//         type: String,
-//         required: [true, 'Name is required']
-//     },
-//     email: {
-//         type: String,
-//         required: [true, 'Email is required'],
-//         match: [/.+@.+\..+/, 'Must use a valid email address'] // Basic email validation
-//     },
-//     project_type: {
-//         type: String,
-//         default: 'Not Specified'
-//     },
-//     phone_number: {
-//         type: String,
-//         default: 'N/A'
-//     },
-//     message: {
-//         type: String,
-//         required: [true, 'Message is required']
-//     },
-//     // Timestamp for when the entry was created
-//     date: {
-//         type: Date,
-//         default: Date.now
-//     }
-// });
-
-// // Export the model, which will create a collection named 'contacts' in MongoDB
-// module.exports = mongoose.model('Contact', contactSchema);
-
-
-
-// const mongoose = require('mongoose');
-
-// const contactSchema = new mongoose.Schema({
-//   name: { type: String, required: [true, 'Name is required'] },
-//   email: { type: String, required: [true, 'Email is required'], match: [/.+@.+\..+/, 'Must use a valid email'] },
-//   project_type: { type: String, default: 'Not Specified' },
-//   phone_number: { type: String, default: 'N/A' },
-//   message: { type: String, required: [true, 'Message is required'] },
-//   date: { type: Date, default: Date.now }
-// });
-
-// module.exports = mongoose.model('Contact', contactSchema);
-
-
-
-// --- models/Contact.js ---
 import mongoose from 'mongoose';
 
 const contactSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: [true, 'Name is required'],
-        trim: true
-    },
-    email: {
-        type: String,
-        required: [true, 'Email is required'],
-        trim: true,
-        lowercase: true,
-        match: [/.+@.+\..+/, 'Please fill a valid email address']
-    },
-    subject: {
-        type: String,
-        required: [true, 'Subject is required'],
-        trim: true
-    },
-    message: {
-        type: String,
-        required: [true, 'Message is required']
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    }
+  name: {
+    type: String,
+    required: [true, 'Name is required'],
+    trim: true,
+    maxlength: [100, 'Name cannot exceed 100 characters']
+  },
+  email: {
+    type: String,
+    required: [true, 'Email is required'],
+    trim: true,
+    lowercase: true,
+    match: [/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/, 'Please enter a valid email']
+  },
+  subject: {
+    type: String,
+    required: [true, 'Subject is required'],
+    trim: true,
+    maxlength: [200, 'Subject cannot exceed 200 characters']
+  },
+  message: {
+    type: String,
+    required: [true, 'Message is required'],
+    trim: true,
+    maxlength: [2000, 'Message cannot exceed 2000 characters']
+  },
+  phone: {
+    type: String,
+    trim: true,
+    maxlength: [20, 'Phone number cannot exceed 20 characters']
+  }
+}, {
+  timestamps: true
 });
+
+// Index for better query performance
+contactSchema.index({ email: 1 });
+contactSchema.index({ createdAt: -1 });
 
 const Contact = mongoose.model('Contact', contactSchema);
 
