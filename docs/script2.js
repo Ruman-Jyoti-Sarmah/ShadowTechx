@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'http://localhost:5000/api/contact';
+    const apiUrl = 'https://shadow-tech-backend.onrender.com/api/contact';
 
     const form = document.getElementById('contact-form');
     const messageElement = document.getElementById('form-message');
