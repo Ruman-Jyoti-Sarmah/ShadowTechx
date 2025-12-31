@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'https://shadow-tech-backend.onrender.com/api/contact';
+    const apiUrl = 'https://shadow-tech-backend.onrender.com/contact';
 
     const form = document.getElementById('contact-form');
     const messageElement = document.getElementById('form-message');
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } catch (err) {
             console.error('Network error:', err);
-            showMessage('Connection Error: Could not reach the server. Is the Laravel backend running on port 8000?', 'error');
+            showMessage('Connection Error: Could not reach the server. Is the Node.js backend running?', 'error');
         } finally {
             submitButton.disabled = false;
             submitButton.textContent = 'Launch Consultation';
