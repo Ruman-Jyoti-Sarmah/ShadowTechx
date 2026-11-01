@@ -1,6 +1,6 @@
 /* Custom Properties — premium BLUE + PURPLE system */
 /* ============================================================
-   SHADOWTECHX — Main Website (index1.html)
+   SHADOWTECHX — Shared Home and Consultation Styles
    Professional light / white theme with electric-blue accent.
    ============================================================ */
 
@@ -249,6 +249,8 @@ h3 {
     display: none;
     flex-direction: column;
     gap: 5px;
+    border: 0;
+    background: transparent;
     cursor: pointer;
     padding: 6px;
     z-index: 110;
@@ -359,6 +361,15 @@ h3 {
 
 .hero h2 {
     font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+    margin-bottom: 18px;
+    line-height: 1.12;
+}
+
+.hero h1 {
+    color: var(--ink);
+    font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
     margin-bottom: 18px;
     line-height: 1.12;
 }
@@ -1385,7 +1396,7 @@ h3 {
 }
 
 /* ============================================================
-   3D Animated Background (index1.html) — light theme
+   3D Animated Background (pages/html/home/home.html) — light theme
    ============================================================ */
 
 #bg-3d {
@@ -1430,7 +1441,7 @@ h3 {
 }
 
 /* ============================================================
-   3D Scroll Reveal (index1.html)
+   3D Scroll Reveal (pages/html/home/home.html)
    Cards settle into place with a subtle 3D perspective tilt.
    ============================================================ */
 

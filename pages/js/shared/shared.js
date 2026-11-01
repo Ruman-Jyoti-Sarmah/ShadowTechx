@@ -1,14 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navbar shadow enhancement on scroll
-    const header = document.getElementById('main-header');
-    if (header) {
-        const onScroll = () => {
-            header.classList.toggle('scrolled', (window.pageYOffset || window.scrollY) > 24);
-        };
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
-    }
-
     // --- EmailJS configuration (frontend-only) ---
     // Enter YOUR OWN EmailJS credentials here (all three are public values, safe for the frontend):
     //   serviceId  -> EmailJS Dashboard > Email Services (e.g. "service_xxxxxxx")
@@ -22,34 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const form = document.getElementById('contact-form');
     const messageElement = document.getElementById('form-message');
-
-    // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const sidebar = document.getElementById('sidebar');
-
-    function setMenu(open) {
-        sidebar.classList.toggle('active', open);
-        hamburger.classList.toggle('open', open);
-    }
-
-    hamburger.addEventListener('click', () => {
-        setMenu(!sidebar.classList.contains('active'));
-    });
-
-    // Close sidebar when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
-            setMenu(false);
-        }
-    });
-
-    // Close sidebar when clicking a link
-    const sidebarLinks = document.querySelectorAll('.sidebar-link');
-    sidebarLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        setMenu(false);
-      });
-    });
 
     // FAQ accordion functionality
     const faqItems = document.querySelectorAll('.faq-item');
@@ -68,12 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    if (!form) {
-        console.error('Contact form element not found (ID: contact-form)');
-        return;
-    }
-
-    function showMessage(text, type = 'info') {
+    if (form) {
+      function showMessage(text, type = 'info') {
         messageElement.textContent = text;
         messageElement.classList.remove('form-message-hidden', 'form-message-success', 'form-message-error');
         if (type === 'success') {
@@ -81,9 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (type === 'error') {
             messageElement.classList.add('form-message-error');
         }
-    }
+      }
 
-    form.addEventListener('submit', async (e) => {
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const submitButton = form.querySelector('button[type="submit"]');
@@ -136,17 +94,17 @@ document.addEventListener('DOMContentLoaded', () => {
             EMAILJS_CONFIG.templateId.startsWith('YOUR_') ||
             EMAILJS_CONFIG.publicKey.startsWith('YOUR_')) {
             showMessage('Email service is not configured yet. Please contact us directly.', 'error');
-            console.error('EmailJS credentials missing in script1.js (EMAILJS_CONFIG).');
+            console.error('EmailJS credentials are missing in pages/js/shared/shared.js (EMAILJS_CONFIG).');
             restoreButton();
             return;
         }
 
-        // Guard: the EmailJS SDK is loaded from a CDN in index1.html.
+        // Guard: the EmailJS SDK is loaded from a CDN on the consultation page.
         // If it failed to load (offline, CDN blocked), fail gracefully
         // instead of crashing inside emailjs.send().
         if (typeof emailjs === 'undefined') {
             showMessage('Email service could not be loaded. Please check your connection and try again.', 'error');
-            console.error('EmailJS SDK not loaded — check the CDN script tag in index1.html.');
+            console.error('EmailJS SDK not loaded — check the CDN script tag in contact.html.');
             restoreButton();
             return;
         }
@@ -190,7 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(restoreButton, 2500);
             setTimeout(() => messageElement.classList.add('form-message-hidden'), 7000);
         }
-    });
+      });
+    }
 
     // --- Pricing Mobile Swipe Dots (native CSS scroll, JS only syncs dots) ---
     const pricingGrid = document.querySelector('.pricing-grid');

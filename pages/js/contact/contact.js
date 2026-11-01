@@ -1,9 +1,14 @@
+import "../shared/shared.js";
+import "../../../js/navbar.js";
+import "../../../js/site-pages.js";
+import "../../../scroll-reveal.js";
+
 /* ============================================================
    ShadowTechX — Premium 3D "Thank You" Popup
    Reusable, self-contained. No dependencies. CSS/SVG only.
 
    Shown ONLY after EmailJS confirms a successful send
-   (called from script1.js via window.ShadowPopup.open()).
+   (called from shared.js via window.ShadowPopup.open()).
 
    API: window.ShadowPopup.open() / window.ShadowPopup.close()
    ============================================================ */

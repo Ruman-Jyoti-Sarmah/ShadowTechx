@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="../../../">
   <meta charset="UTF-8" />
-  <title>Projects | ShadowTech</title>
+  <title>Projects | Shadow Techx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style2.css?v=2" />
+  <link rel="stylesheet" href="pages/css/work/work.css">
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="work">
 
     <!-- 3D Animated Background -->
     <canvas id="bg-3d" aria-hidden="true"></canvas>
 
     <header class="main-header">
         <div class="container">
-            <div class="brand"><img src="images/shadow-techx-icon.png" alt="ShadowTechX icon" class="brand-logo"><span class="brand-name"><span class="shadow-part">SHADOW</span><span class="techx-part">TECHX</span></span></div>
+            <a class="brand" href="pages/html/home/home.html" aria-label="Shadow Techx home"><img src="images/shadow-techx-icon.png" alt="" class="brand-logo"><span class="brand-name"><span class="shadow-part">SHADOW</span><span class="techx-part">TECHX</span></span></a>
             <nav class="main-nav" id="main-nav">
                 <ul>
-                    <li><a href="index1.html" class="cta-button">Home</a></li>
-                    <li><a href="index1.html#contact" class="nav-cta">Start Your Project</a></li>
+                    <li><a href="pages/html/home/home.html">Home</a></li>
+                    <li><a href="pages/html/services/services.html">Services</a></li>
+                    <li><a href="pages/html/work/work.html" aria-current="page">Work</a></li>
+                    <li><a href="pages/html/about/about.html">About</a></li>
+                    <li><a href="pages/html/insights/insights.html">Insights</a></li>
+                    <li><a href="pages/html/contact/contact.html" class="nav-cta">Start Your Project</a></li>
                 </ul>
             </nav>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </header>
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar" id="sidebar" aria-hidden="true">
         <div class="sidebar-content">
-            <a href="index1.html" class="sidebar-link">Home</a>
-            <a href="index1.html#contact" class="sidebar-link nav-cta">Start Your Project</a>
+            <a href="pages/html/home/home.html" class="sidebar-link">Home</a>
+            <a href="pages/html/services/services.html" class="sidebar-link">Services</a>
+            <a href="pages/html/work/work.html" class="sidebar-link" aria-current="page">Work</a>
+            <a href="pages/html/about/about.html" class="sidebar-link">About</a>
+            <a href="pages/html/insights/insights.html" class="sidebar-link">Insights</a>
+            <a href="pages/html/contact/contact.html" class="sidebar-link nav-cta">Start Your Project</a>
         </div>
     </div>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero hero--work">
     <h1>Our Projects</h1>
-    <p>Websites, applications, and digital solutions built by ShadowTech.</p>
+    <p>Websites, applications, and digital solutions built by Shadow Techx.</p>
   </section>
 
   <!-- Projects -->
@@ -62,6 +73,7 @@
       <img src="images/project1.png" alt="E-commerce Website">
       <h3>E-Commerce Website</h3>
       <p>Modern online store with product catalog and checkout.</p>
+      <div class="project-stack"><strong>Built with</strong><ul><li>React</li><li>JavaScript</li></ul></div>
       <div class="buttons">
         <a href="https://hymns-152.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
         <a class="outline" href="https://github.com/Ruman-Jyoti-Sarmah/HYMNS152">GitHub Repo</a>
@@ -84,6 +96,7 @@
       <img src="images/project2.png" alt="Mobile App">
       <h3>A animated website for resorts & hotels</h3>
       <p>Smood and futurestic website.</p>
+      <div class="project-stack"><strong>Built with</strong><ul><li>React</li><li>JavaScript</li></ul></div>
       <div class="buttons">
         <a href="https://serena-park-resort-website.vercel.app/" target="_blank" rel="noopener noreferrer">View website</a>
       </div>
@@ -105,6 +118,7 @@
       <img src="images/project3.png" alt="Dashboard">
       <h3>Animated 3d Resort/Hotel Website</h3>
       <p>Fully Animated 3d Website For Resort Or Hotel.</p>
+      <div class="project-stack"><strong>Built with</strong><ul><li>React</li><li>JavaScript</li></ul></div>
       <div class="buttons">
         <a href="https://resort-seven-puce.vercel.app" target="_blank" rel="noopener noreferrer">Preview</a>
       </div>
@@ -126,6 +140,7 @@
       <img src="images/project4.png" alt="Portfolio">
       <h3>Wedding managment Website</h3>
       <p>A animated wedding managment website.</p>
+      <div class="project-stack"><strong>Built with</strong><ul><li>React</li><li>JavaScript</li></ul></div>
       <div class="buttons">
         <a href="https://kanvas360.vercel.app" target="_blank" rel="noopener noreferrer">Visit Site</a>
       </div>
@@ -148,6 +163,7 @@
       <img src="images/project5.png" alt="Task Manager">
       <h3>Professional Second Hand Dealer Website</h3>
       <p>A Fully Professional And Smood Website For Online Car Order.</p>
+      <div class="project-stack"><strong>Built with</strong><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div>
       <div class="buttons">
         <a href="https://ruman-jyoti-sarmah.github.io/R.D-Motors/" target="_blank" rel="noopener noreferrer">See Project</a>
         <a class="outline" href="https://github.com/Ruman-Jyoti-Sarmah/R.D-Motors">GitHub Repo</a>
@@ -171,6 +187,7 @@
       <img src="images/project6.png" alt="IoT App">
       <h3>Animated Restaurant Website</h3>
       <p>Fullly Smood Animated Resturent Website.</p>
+      <div class="project-stack"><strong>Built with</strong><ul><li>React</li><li>JavaScript</li></ul></div>
       <div class="buttons">
         <a href="https://ruman-jyoti-sarmah.github.io/Crowd-and-crowds/" target="_blank" rel="noopener noreferrer">See Demo</a>
         <a class="outline" href="https://github.com/Ruman-Jyoti-Sarmah/Crowd-and-crowds">GitHub Repo</a>
@@ -181,37 +198,61 @@
 
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <h4>ShadowTech</h4>
-                    <p>Digital Engineering Agency. <br>&copy; 2025 ShadowTech. All rights reserved.
-                    <br>Author : Ruman Jyoti Sarmah & Amlan Phukon</p>
-
-
+            <section class="footer-cta" aria-labelledby="footer-cta-title">
+                <div>
+                    <p class="footer-eyebrow">Shadow Techx · Project inquiries</p>
+                    <h2 id="footer-cta-title">Ready to build something useful?</h2>
+                    <p>Tell us what you are working on. We can talk through your goals, scope, and practical next steps.</p>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
+                <a class="footer-cta-link" href="pages/html/contact/contact.html">Start a project inquiry <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </section>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="footer-wordmark" href="pages/html/home/home.html">SHADOW <span>TECHX</span></a>
+                    <p>Independent digital product design and engineering, from the first conversation through delivery.</p>
+                </div>
+                <div>
+                    <h2>Our services</h2>
                     <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="pages/html/website-development/website-development.html">Website development</a></li>
+                        <li><a href="pages/html/mobile-app-development/mobile-app-development.html">Mobile app development</a></li>
+                        <li><a href="pages/html/custom-software-development/custom-software-development.html">Custom software</a></li>
+                        <li><a href="pages/html/desktop-software-development/desktop-software-development.html">Desktop software</a></li>
+                        <li><a href="pages/html/ecommerce-development/ecommerce-development.html">E-commerce</a></li>
+                        <li><a href="pages/html/ai-solutions/ai-solutions.html">AI solutions</a></li>
                     </ul>
                 </div>
-                <div class="footer-social">
-                    <h4>Connect</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Ruman-Jyoti-Sarmah"><i class="fab fa-github"></i></a>
-                        <a href="https://www.instagram.com/shadow_techx?igsi=bDh3NmhubXNpbA=="><i class="fab fa-instagram"></i></a>
+                <div>
+                    <h2>Explore</h2>
+                    <ul>
+                        <li><a href="pages/html/home/home.html">Home</a></li>
+                        <li><a href="pages/html/work/work.html">Work</a></li>
+                        <li><a href="pages/html/about/about.html">About</a></li>
+                        <li><a href="pages/html/insights/insights.html">Insights</a></li>
+                        <li><a href="pages/html/testimonials/testimonials.html">Client experience</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Connect</h2>
+                    <ul>
+                        <li><a href="pages/html/contact/contact.html">Project inquiries</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="https://github.com/Ruman-Jyoti-Sarmah" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/shadow_techx/" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shadow Techx. All rights reserved.</p>
+                <div class="footer-legal"><a href="pages/html/privacy-policy/privacy-policy.html">Privacy</a><a href="pages/html/terms-of-service/terms-of-service.html">Terms</a></div>
             </div>
         </div>
     </footer>
 
-    <script src="script2.js"></script>
-  <script src="scroll-reveal.js"></script>
+    <script type="module" src="pages/js/work/work.js"></script>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="3d-bg.js"></script>
 </body>

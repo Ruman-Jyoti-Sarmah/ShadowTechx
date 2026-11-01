@@ -1,6 +1,6 @@
 /* ============================================================
    scroll-reveal.js — Subtle 3D entrance for content as it
-   scrolls into view. Used by index1.html and index2.html.
+   scrolls into view. Used by the organized home and work pages.
 
    Elements marked with [data-reveal] start slightly rotated /
    translated in 3D space and settle into place with a staggered

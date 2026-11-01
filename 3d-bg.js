@@ -1,6 +1,6 @@
 /* ============================================================
    3d-bg.js — Shared lightweight Three.js animated background
-   used by index1.html and index2.html.
+   used by the organized home and work pages.
 
    - Floating particle field (vertex colored: cyan / green / white)
    - Two slow-rotating wireframe shapes (subtle depth layers)

@@ -1,5 +1,5 @@
 /* ============================================================
-   SHADOWTECHX — Projects / Portfolio (index2.html)
+   SHADOWTECHX — Projects / Portfolio (pages/html/work/work.html)
    Professional light theme with electric-blue accent.
    ============================================================ */
 
@@ -157,6 +157,8 @@ body {
 .hamburger {
   display: none;
   flex-direction: column;
+  border: 0;
+  background: transparent;
   cursor: pointer;
   gap: 5px;
   padding: 6px;
@@ -241,6 +243,19 @@ body {
     linear-gradient(180deg, #f6f9ff 0%, var(--bg) 100%);
 }
 
+.hero--work {
+  background-image:
+    linear-gradient(90deg, rgba(7, 12, 25, 0.88), rgba(7, 12, 25, 0.52)),
+    url("https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1800&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero--work p {
+  color: #e2e8f0;
+}
+
 .hero h1 {
   font-size: clamp(2.4rem, 5vw, 3.4rem);
   margin-bottom: 18px;
@@ -315,6 +330,36 @@ body {
   line-height: 1.6;
 }
 
+.project-stack {
+  margin-top: 16px;
+}
+
+.project-stack strong {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--ink);
+  font-size: 0.82rem;
+}
+
+.project-stack ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-stack li {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--primary);
+  background: rgba(37, 99, 235, 0.06);
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
 /* Buttons */
 .buttons {
   margin-top: 24px;
@@ -356,7 +401,7 @@ body {
 }
 
 /* ============================================================
-   3-Dot Kebab Menu + Smooth Animated Dropdown (index2.html)
+   3-Dot Kebab Menu + Smooth Animated Dropdown (pages/html/work/work.html)
    Each project card gets a three-dot button that, on click,
    reveals a smoothly animated dropdown menu.
    ============================================================ */
@@ -815,8 +860,44 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    padding: 104px 20px 42px;
+  }
+
+  .hero h1 {
+    max-width: 620px;
+    font-size: clamp(2.15rem, 8.8vw, 2.7rem);
+    line-height: 1.08;
+  }
+
+  .hero p {
+    line-height: 1.7;
+  }
+
+  .projects {
+    padding-top: 38px;
+    padding-bottom: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 92px 20px 34px;
+  }
+
+  .hero h1 {
+    font-size: 2.15rem;
+  }
+
+  .projects {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
 /* ============================================================
-   3D Animated Background (index2.html) — light theme
+   3D Animated Background (pages/html/work/work.html) — light theme
    ============================================================ */
 
 #bg-3d {
@@ -858,7 +939,7 @@ body {
 }
 
 /* ============================================================
-   3D Scroll Reveal (index2.html)
+   3D Scroll Reveal (pages/html/work/work.html)
    Project cards settle into place with a subtle 3D tilt.
    ============================================================ */
 
