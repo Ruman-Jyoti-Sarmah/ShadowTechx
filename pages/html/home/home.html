@@ -1,520 +1,1014 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <base href="../../../">
+  <head>
+    <base href="../../../" />
     <script src="chatbot/embed.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shadow Techx designs and builds websites, mobile apps, custom software, e-commerce experiences, desktop applications, and practical AI tools.">
+    <link rel="icon" href="images/shadow-techx-icon.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shadow Techx is a technology and digital solutions company in Assam, India. We build websites, apps, AI features and business software, with engineering, creative and business teams in-house."
+    />
 
-    <title>Shadow Techx | Software, Web &amp; Digital Products</title>
-    <link rel="stylesheet" href="pages/css/home/home.css">
+    <title>Shadow Techx | Websites, apps and software from Assam</title>
+    <link rel="stylesheet" href="pages/css/home/home.css" />
 
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- 3D Animated Background -->
     <canvas id="bg-3d" aria-hidden="true"></canvas>
 
     <header class="main-header">
-        <div class="container">
-            <a class="brand" href="pages/html/home/home.html" aria-label="Shadow Techx home"><img src="images/shadow-techx-icon.png" alt="" class="brand-logo"><span class="brand-name"><span class="shadow-part">SHADOW</span><span class="techx-part">TECHX</span></span></a>
-            <nav class="main-nav" id="main-nav">
-                <ul>
-                    <li><a href="pages/html/home/home.html" aria-current="page">Home</a></li>
-                    <li><a href="pages/html/services/services.html">Services</a></li>
-                    <li><a href="pages/html/about/about.html">About</a></li>
-                    <li><a href="pages/html/work/work.html">Work</a></li>
-                    <li><a href="pages/html/insights/insights.html">Insights</a></li>
-                    <li><a href="pages/html/contact/contact.html" class="nav-cta">Start a project</a></li>
-                </ul>
-            </nav>
-            <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+      <div class="container">
+        <a
+          class="brand"
+          href="pages/html/home/home.html"
+          aria-label="Shadow Techx home"
+          ><img
+            src="images/shadow-techx-icon.png"
+            alt=""
+            class="brand-logo"
+          /><span class="brand-name"
+            ><span class="shadow-part">SHADOW</span
+            ><span class="techx-part">TECHX</span></span
+          ></a
+        >
+        <nav class="main-nav" id="main-nav">
+          <ul>
+            <li>
+              <a href="pages/html/home/home.html" aria-current="page">Home</a>
+            </li>
+            <li><a href="pages/html/services/services.html">Services</a></li>
+            <li><a href="pages/html/about/about.html">About</a></li>
+            <li><a href="pages/html/work/work.html">Work</a></li>
+            <li><a href="pages/html/insights/insights.html">Insights</a></li>
+            <li>
+              <a href="pages/html/contact/contact.html" class="nav-cta"
+                >Start a project</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="hamburger"
+          id="hamburger"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
     <div class="sidebar" id="sidebar" aria-hidden="true">
-        <div class="sidebar-content">
-            <a href="pages/html/home/home.html" class="sidebar-link" aria-current="page">Home</a>
-            <a href="pages/html/services/services.html" class="sidebar-link">Services</a>
-            <a href="pages/html/about/about.html" class="sidebar-link">About</a>
-            <a href="pages/html/work/work.html" class="sidebar-link">Projects</a>
-            <a href="pages/html/insights/insights.html" class="sidebar-link">Insights</a>
-            <a href="pages/html/contact/contact.html" class="sidebar-link nav-cta">Start a project</a>
-        </div>
+      <div class="sidebar-content">
+        <a
+          href="pages/html/home/home.html"
+          class="sidebar-link"
+          aria-current="page"
+          >Home</a
+        >
+        <a href="pages/html/services/services.html" class="sidebar-link"
+          >Services</a
+        >
+        <a href="pages/html/about/about.html" class="sidebar-link">About</a>
+        <a href="pages/html/work/work.html" class="sidebar-link">Projects</a>
+        <a href="pages/html/insights/insights.html" class="sidebar-link"
+          >Insights</a
+        >
+        <a href="pages/html/contact/contact.html" class="sidebar-link nav-cta"
+          >Start a project</a
+        >
+      </div>
     </div>
 
     <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <p class="tagline">SHADOW TECHX &nbsp;·&nbsp; SOFTWARE &amp; DIGITAL STUDIO</p>
-                <h1>Ideas into <span class="highlight">useful digital products.</span></h1>
-                <p class="subtitle">We design and engineer websites, mobile apps, custom software, online stores, desktop tools, and practical AI features—with a clear plan from the first conversation.</p>
-                <div class="hero-actions">
-                    <a href="pages/html/contact/contact.html" class="btn btn-primary">Tell us about your project <i class="fas fa-arrow-right"></i></a>
-                    <a href="pages/html/work/work.html" class="btn btn-secondary">Explore selected work</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="home-hero-art" aria-label="Shadow Techx digital product capabilities">
-                    <div class="hero-art-orbit hero-art-orbit-one"></div>
-                    <div class="hero-art-orbit hero-art-orbit-two"></div>
-                    <div class="hero-art-core"><img src="images/shadow-techx-icon.png" alt=""></div>
-                    <div class="hero-art-chips">
-                        <div class="hero-art-chip hero-art-chip-web"><i class="fas fa-code"></i><span>Web platforms</span></div>
-                        <div class="hero-art-chip hero-art-chip-app"><i class="fas fa-mobile-alt"></i><span>Mobile apps</span></div>
-                        <div class="hero-art-chip hero-art-chip-ai"><i class="fas fa-wand-magic-sparkles"></i><span>Applied AI</span></div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="hero-content">
+          <p class="tagline">SHADOW TECHX &nbsp;·&nbsp; ASSAM, INDIA</p>
+          <h1>Real software, built by <span class="highlight">real people.</span></h1>
+          <p class="subtitle">
+            A technology and digital solutions company from Assam. We build
+            websites, apps and business software &mdash; and you talk to the
+            people actually building it, not a sales team.
+          </p>
+          <div class="hero-actions">
+            <a href="pages/html/contact/contact.html" class="btn btn-primary"
+              >Tell us what you need <i class="fas fa-arrow-right"></i
+            ></a>
+            <a href="pages/html/work/work.html" class="btn btn-secondary"
+              >Look at our work</a
+            >
+          </div>
         </div>
+        <div class="hero-image">
+          <div
+            class="home-hero-art"
+            aria-label="Shadow Techx digital product capabilities"
+          >
+            <div class="hero-art-orbit hero-art-orbit-one"></div>
+            <div class="hero-art-orbit hero-art-orbit-two"></div>
+            <div class="hero-art-core">
+              <img src="images/shadow-techx-icon.png" alt="" />
+            </div>
+            <div class="hero-art-chips">
+              <div class="hero-art-chip hero-art-chip-web">
+                <i class="fas fa-code"></i><span>Websites</span>
+              </div>
+              <div class="hero-art-chip hero-art-chip-app">
+                <i class="fas fa-mobile-alt"></i><span>Apps</span>
+              </div>
+              <div class="hero-art-chip hero-art-chip-ai">
+                <i class="fas fa-wand-magic-sparkles"></i><span>AI tools</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="home-proof-strip" aria-label="Shadow Techx at a glance">
-        <div class="home-proof-marquee">
-            <div class="home-proof-track">
-                <div class="home-proof-group">
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number"><span data-count="6">6</span></strong>
-                        <span class="home-proof-copy"><span>Client Platforms Built</span><span>Live in production</span></span>
-                    </div>
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number"><span data-count="6">6</span></strong>
-                        <span class="home-proof-copy"><span>Core Services</span><span>Web, Mobile, AI &amp; Software</span></span>
-                    </div>
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number"><span data-count="14">14</span>+</strong>
-                        <span class="home-proof-copy"><span>Technologies Mastered</span><span>Modern full-stack ecosystems</span></span>
-                    </div>
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number"><span data-count="100">100</span>%</strong>
-                        <span class="home-proof-copy"><span>Client IP Ownership</span><span>Full source code ownership</span></span>
-                    </div>
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number">Direct</strong>
-                        <span class="home-proof-copy"><span>Developer Access</span><span>Work directly with builders</span></span>
-                    </div>
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number"><span data-count="30">30</span>-Day</strong>
-                        <span class="home-proof-copy"><span>Post-Launch Warranty</span><span>Included hyper-care &amp; support</span></span>
-                    </div>
-                </div>
-                <div class="home-proof-group" aria-hidden="true">
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number"><span data-count="6">6</span></strong>
-                        <span class="home-proof-copy"><span>Client Platforms Built</span><span>Live in production</span></span>
-                    </div>
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number"><span data-count="6">6</span></strong>
-                        <span class="home-proof-copy"><span>Core Services</span><span>Web, Mobile, AI &amp; Software</span></span>
-                    </div>
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number"><span data-count="14">14</span>+</strong>
-                        <span class="home-proof-copy"><span>Technologies Mastered</span><span>Modern full-stack ecosystems</span></span>
-                    </div>
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number"><span data-count="100">100</span>%</strong>
-                        <span class="home-proof-copy"><span>Client IP Ownership</span><span>Full source code ownership</span></span>
-                    </div>
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number">Direct</strong>
-                        <span class="home-proof-copy"><span>Developer Access</span><span>Work directly with builders</span></span>
-                    </div>
-                    <div class="home-proof-item">
-                        <strong class="home-proof-number"><span data-count="30">30</span>-Day</strong>
-                        <span class="home-proof-copy"><span>Post-Launch Warranty</span><span>Included hyper-care &amp; support</span></span>
-                    </div>
-                </div>
+      <div class="home-proof-marquee">
+        <div class="home-proof-track">
+          <div class="home-proof-group">
+            <div class="home-proof-item">
+              <strong class="home-proof-number"
+                ><span data-count="6">6</span></strong
+              >
+              <span class="home-proof-copy"
+                ><span>Projects shipped</span
+                ><span>All live and clickable</span></span
+              >
             </div>
+            <div class="home-proof-item">
+              <strong class="home-proof-number"
+                ><span data-count="2">2</span></strong
+              >
+              <span class="home-proof-copy"
+                ><span>Founders leading it</span
+                ><span>On every project</span></span
+              >
+            </div>
+            <div class="home-proof-item">
+              <strong class="home-proof-number">4</strong>
+              <span class="home-proof-copy"
+                ><span>Specialist teams</span
+                ><span>Tech, creative, AI, business</span></span
+              >
+            </div>
+            <div class="home-proof-item">
+              <strong class="home-proof-number">100%</strong>
+              <span class="home-proof-copy"
+                ><span>Code is yours</span
+                ><span>Repo handed over at the end</span></span
+              >
+            </div>
+            <div class="home-proof-item">
+              <strong class="home-proof-number">Direct</strong>
+              <span class="home-proof-copy"
+                ><span>No account manager</span
+                ><span>Straight to the developer</span></span
+              >
+            </div>
+            <div class="home-proof-item">
+              <strong class="home-proof-number"
+                ><span data-count="30">30</span> days</strong
+              >
+              <span class="home-proof-copy"
+                ><span>Bug fixes after launch</span
+                ><span>Free, no arguments</span></span
+              >
+            </div>
+          </div>
+          <div class="home-proof-group" aria-hidden="true">
+            <div class="home-proof-item">
+              <strong class="home-proof-number"
+                ><span data-count="6">6</span></strong
+              >
+              <span class="home-proof-copy"
+                ><span>Projects shipped</span
+                ><span>All live and clickable</span></span
+              >
+            </div>
+            <div class="home-proof-item">
+              <strong class="home-proof-number"
+                ><span data-count="2">2</span></strong
+              >
+              <span class="home-proof-copy"
+                ><span>Founders leading it</span
+                ><span>On every project</span></span
+              >
+            </div>
+            <div class="home-proof-item">
+              <strong class="home-proof-number">4</strong>
+              <span class="home-proof-copy"
+                ><span>Specialist teams</span
+                ><span>Tech, creative, AI, business</span></span
+              >
+            </div>
+            <div class="home-proof-item">
+              <strong class="home-proof-number">100%</strong>
+              <span class="home-proof-copy"
+                ><span>Code is yours</span
+                ><span>Repo handed over at the end</span></span
+              >
+            </div>
+            <div class="home-proof-item">
+              <strong class="home-proof-number">Direct</strong>
+              <span class="home-proof-copy"
+                ><span>No account manager</span
+                ><span>Straight to the developer</span></span
+              >
+            </div>
+            <div class="home-proof-item">
+              <strong class="home-proof-number"
+                ><span data-count="30">30</span> days</strong
+              >
+              <span class="home-proof-copy"
+                ><span>Bug fixes after launch</span
+                ><span>Free, no arguments</span></span
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="services" class="section services-section">
-        <div class="container">
-            <p class="home-eyebrow" data-reveal>WHAT WE DO</p>
-            <h2 class="home-section-title" data-reveal>Build the right digital experience for the job.</h2>
-            <p class="home-section-intro" data-reveal>From a new customer-facing product to a tool that makes daily work simpler, start with the challenge—not a preset technology stack.</p>
-        </div>
+      <div class="container">
+        <p class="home-eyebrow" data-reveal>WHAT WE DO</p>
+        <h2 class="home-section-title" data-reveal>
+          Six things we're good at.
+        </h2>
+        <p class="home-section-intro" data-reveal>
+          Most of our work is a website, an app, or a tool that replaces a
+          spreadsheet. If your project is something else, ask anyway &mdash;
+          we'll tell you honestly if it's not our thing.
+        </p>
+      </div>
 
-        <!-- Full-width horizontal showcase — one large card at a time -->
-        <div class="services-scroller" id="services-scroller">
-            <article class="service-slide">
-                <div class="service-card-large">
-                    <span class="service-num">01</span>
-                    <div class="service-icon"><i class="fas fa-code"></i></div>
-                    <h4>Website Development</h4>
-                    <p>Responsive websites and web applications built around your users, workflows, and business goals.</p>
-                    <a href="pages/html/website-development/website-development.html" class="service-link">Explore website development <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-            <article class="service-slide">
-                <div class="service-card-large">
-                    <span class="service-num">02</span>
-                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h4>App Development</h4>
-                    <p>iOS and Android apps using native or cross-platform tools such as Swift, Kotlin, Flutter, and React Native.</p>
-                    <a href="pages/html/mobile-app-development/mobile-app-development.html" class="service-link">Explore mobile apps <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-            <article class="service-slide">
-                <div class="service-card-large">
-                    <span class="service-num">03</span>
-                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-                    <h4>Custom Software</h4>
-                    <p>Purpose-built business systems, dashboards, and integrations that support the way your team works.</p>
-                    <a href="pages/html/custom-software-development/custom-software-development.html" class="service-link">Explore custom software <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-            <article class="service-slide">
-                <div class="service-card-large">
-                    <span class="service-num">04</span>
-                    <div class="service-icon"><i class="fas fa-cloud"></i></div>
-                    <h4>Desktop Applications</h4>
-                    <p>Desktop software for Windows, macOS, and Linux, with offline-first or connected workflows as needed.</p>
-                    <a href="pages/html/desktop-software-development/desktop-software-development.html" class="service-link">Explore desktop software <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-            <article class="service-slide">
-                <div class="service-card-large">
-                    <span class="service-num">05</span>
-                    <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
-                    <h4>E-commerce Development</h4>
-                    <p>Online stores and marketplace experiences with product discovery, checkout, and payment integrations.</p>
-                    <a href="pages/html/ecommerce-development/ecommerce-development.html" class="service-link">Explore e-commerce <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-            <article class="service-slide">
-                <div class="service-card-large">
-                    <span class="service-num">06</span>
-                    <div class="service-icon"><i class="fas fa-brain"></i></div>
-                    <h4>AI Solutions</h4>
-                    <p>AI-assisted workflows, document search, and tool-using agents, scoped with data handling in mind.</p>
-                    <a href="pages/html/ai-solutions/ai-solutions.html" class="service-link">Explore AI solutions <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-        </div>
+      <!-- Full-width horizontal showcase — one large card at a time -->
+      <div class="services-scroller" id="services-scroller">
+        <article class="service-slide">
+          <div class="service-card-large">
+            <span class="service-num">01</span>
+            <div class="service-icon"><i class="fas fa-code"></i></div>
+            <h4>Websites</h4>
+            <p>
+              Business sites, landing pages and web apps. Fast, works on phones,
+              and you can update the content yourself.
+            </p>
+            <a
+              href="pages/html/website-development/website-development.html"
+              class="service-link"
+              >More on websites <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+        <article class="service-slide">
+          <div class="service-card-large">
+            <span class="service-num">02</span>
+            <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h4>Mobile apps</h4>
+            <p>
+              Android and iOS apps. We usually build with React Native or
+              Flutter so one codebase covers both stores.
+            </p>
+            <a
+              href="pages/html/mobile-app-development/mobile-app-development.html"
+              class="service-link"
+              >More on mobile apps <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+        <article class="service-slide">
+          <div class="service-card-large">
+            <span class="service-num">03</span>
+            <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+            <h4>Custom software</h4>
+            <p>
+              Admin panels, dashboards and internal tools for the parts of your
+              work that no off-the-shelf product fits.
+            </p>
+            <a
+              href="pages/html/custom-software-development/custom-software-development.html"
+              class="service-link"
+              >More on custom software <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+        <article class="service-slide">
+          <div class="service-card-large">
+            <span class="service-num">04</span>
+            <div class="service-icon"><i class="fas fa-cloud"></i></div>
+            <h4>Desktop apps</h4>
+            <p>
+              Windows and macOS tools for work that needs the local machine
+              &mdash; files, printers, scanners, or no internet.
+            </p>
+            <a
+              href="pages/html/desktop-software-development/desktop-software-development.html"
+              class="service-link"
+              >More on desktop apps <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+        <article class="service-slide">
+          <div class="service-card-large">
+            <span class="service-num">05</span>
+            <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+            <h4>Online stores</h4>
+            <p>
+              Product catalogues, carts and checkout with Razorpay, Stripe or
+              UPI. We've shipped one already &mdash; HYMNS152.
+            </p>
+            <a
+              href="pages/html/ecommerce-development/ecommerce-development.html"
+              class="service-link"
+              >More on e-commerce <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+        <article class="service-slide">
+          <div class="service-card-large">
+            <span class="service-num">06</span>
+            <div class="service-icon"><i class="fas fa-brain"></i></div>
+            <h4>AI features</h4>
+            <p>
+              Search over your own documents, draft replies, sort incoming
+              messages. Small, specific jobs &mdash; not a chatbot bolted onto
+              everything.
+            </p>
+            <a
+              href="pages/html/ai-solutions/ai-solutions.html"
+              class="service-link"
+              >More on AI features <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </article>
+      </div>
 
-        <!-- Navigation: arrows + dots -->
-        <div class="services-nav" data-reveal>
-            <button type="button" class="services-arrow" id="services-prev" aria-label="Previous service"><i class="fas fa-arrow-left"></i></button>
-            <div class="services-dots" id="services-dots"></div>
-            <button type="button" class="services-arrow" id="services-next" aria-label="Next service"><i class="fas fa-arrow-right"></i></button>
-        </div>
-        <div class="container home-services-footer"><a class="home-text-link" href="pages/html/services/services.html">See all services and how we work <i class="fas fa-arrow-right"></i></a></div>
+      <!-- Navigation: arrows + dots -->
+      <div class="services-nav" data-reveal>
+        <button
+          type="button"
+          class="services-arrow"
+          id="services-prev"
+          aria-label="Previous service"
+        >
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="services-dots" id="services-dots"></div>
+        <button
+          type="button"
+          class="services-arrow"
+          id="services-next"
+          aria-label="Next service"
+        >
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="container home-services-footer">
+        <a class="home-text-link" href="pages/html/services/services.html"
+          >See all six, and how a project runs <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
     </section>
 
-    <section class="section home-work-section" id="selected-work" aria-labelledby="home-work-title">
-        <div class="container">
-            <div class="home-section-heading">
-                <div>
-                    <p class="home-eyebrow">SELECTED PROJECTS</p>
-                    <h2 class="home-section-title" id="home-work-title">Our Work &amp; Delivered Projects</h2>
-                    <p class="home-section-intro">A few selected websites and digital experiences from the Shadow Techx portfolio.</p>
-                </div>
-            </div>
-            <div class="home-work-grid">
-                <article class="home-work-card">
-                    <a class="home-work-image" href="https://hymns-152.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the HYMNS152 online store">
-                        <img src="images/project1.png" alt="HYMNS152 online store project preview" loading="lazy">
-                    </a>
-                    <div class="home-work-copy">
-                        <p class="home-work-category">E-COMMERCE <span>·</span> ONLINE STORE</p>
-                        <h3>HYMNS152</h3>
-                        <p>A modern online store centered on product discovery and a straightforward checkout journey.</p>
-                        <div class="home-work-details"><h4>Project highlights</h4><ul><li>Browsable product catalogue</li><li>Online shopping and checkout</li></ul></div>
-                        <div class="home-work-stack"><h4>Built with</h4><ul><li>React</li><li>JavaScript</li></ul></div>
-                        <div class="home-work-actions">
-                            <a class="home-work-live" href="https://hymns-152.vercel.app" target="_blank" rel="noopener noreferrer">Visit live project <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                            <a class="home-work-repo" href="https://github.com/Ruman-Jyoti-Sarmah/HYMNS152" target="_blank" rel="noopener noreferrer" aria-label="View HYMNS152 GitHub repository"><i class="fab fa-github" aria-hidden="true"></i> Source</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="home-work-card">
-                    <a class="home-work-image" href="https://serena-park-resort-website.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Visit the Serena Park website">
-                        <img src="images/project2.png" alt="Serena Park resort website project preview" loading="lazy">
-                    </a>
-                    <div class="home-work-copy">
-                        <p class="home-work-category">HOSPITALITY <span>·</span> RESORT WEBSITE</p>
-                        <h3>Serena Park</h3>
-                        <p>An animated resort and hotel website with a smooth, contemporary visual presentation.</p>
-                        <div class="home-work-details"><h4>Project highlights</h4><ul><li>Resort and hotel web experience</li><li>Animated visual presentation</li></ul></div>
-                        <div class="home-work-stack"><h4>Built with</h4><ul><li>React</li><li>JavaScript</li></ul></div>
-                        <div class="home-work-actions">
-                            <a class="home-work-live" href="https://serena-park-resort-website.vercel.app/" target="_blank" rel="noopener noreferrer">Visit live project <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </article>
-                <article class="home-work-card">
-                    <a class="home-work-image" href="https://resort-seven-puce.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit ARANYA, an Indian heritage resort experience">
-                        <img src="images/project3.png" alt="ARANYA Indian heritage resort website project preview" loading="lazy">
-                    </a>
-                    <div class="home-work-copy">
-                        <p class="home-work-category">HOSPITALITY <span>·</span> 3D RESORT WEBSITE</p>
-                        <h3>ARANYA</h3>
-                        <p>A 3D resort website presenting a sanctuary inspired by Indian heritage.</p>
-                        <div class="home-work-details"><h4>Project highlights</h4><ul><li>Immersive resort website concept</li><li>Indian heritage visual direction</li></ul></div>
-                        <div class="home-work-stack"><h4>Built with</h4><ul><li>React</li><li>JavaScript</li></ul></div>
-                        <div class="home-work-actions">
-                            <a class="home-work-live" href="https://resort-seven-puce.vercel.app" target="_blank" rel="noopener noreferrer">Explore the experience <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <a class="btn btn-primary home-work-all-button" href="pages/html/work/work.html">Explore all works <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    <section
+      class="section home-work-section"
+      id="selected-work"
+      aria-labelledby="home-work-title"
+    >
+      <div class="container">
+        <div class="home-section-heading">
+          <div>
+            <p class="home-eyebrow">SELECTED PROJECTS</p>
+            <h2 class="home-section-title" id="home-work-title">
+              Things we've actually shipped
+            </h2>
+            <p class="home-section-intro">
+              Every link below opens a live site. No mockups, no concept
+              screenshots.
+            </p>
+          </div>
         </div>
+        <div class="home-work-grid">
+          <article class="home-work-card">
+            <a
+              class="home-work-image"
+              href="https://hymns-152.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit the HYMNS152 online store"
+            >
+              <img
+                src="images/project1.png"
+                alt="HYMNS152 online store project preview"
+                loading="lazy"
+              />
+            </a>
+            <div class="home-work-copy">
+              <p class="home-work-category">
+                E-COMMERCE <span>·</span> ONLINE STORE
+              </p>
+              <h3>HYMNS152</h3>
+              <p>
+                A clothing store with a browsable catalogue, product pages and a
+                checkout that doesn't make people give up halfway.
+              </p>
+              <div class="home-work-details">
+                <h4>What's in it</h4>
+                <ul>
+                  <li>Product catalogue</li>
+                  <li>Cart and checkout</li>
+                </ul>
+              </div>
+              <div class="home-work-stack">
+                <h4>Built with</h4>
+                <ul>
+                  <li>React</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+              <div class="home-work-actions">
+                <a
+                  class="home-work-live"
+                  href="https://hymns-152.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open the store
+                  <i
+                    class="fas fa-arrow-up-right-from-square"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+                <a
+                  class="home-work-repo"
+                  href="https://github.com/Ruman-Jyoti-Sarmah/HYMNS152"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View HYMNS152 GitHub repository"
+                  ><i class="fab fa-github" aria-hidden="true"></i> Source</a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="home-work-card">
+            <a
+              class="home-work-image"
+              href="https://serena-park-resort-website.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit the Serena Park website"
+            >
+              <img
+                src="images/project2.png"
+                alt="Serena Park resort website project preview"
+                loading="lazy"
+              />
+            </a>
+            <div class="home-work-copy">
+              <p class="home-work-category">
+                HOSPITALITY <span>·</span> RESORT WEBSITE
+              </p>
+              <h3>Serena Park</h3>
+              <p>
+                A resort site built around photos and motion &mdash; rooms,
+                amenities and booking enquiries, with scroll animations that
+                stay smooth on a phone.
+              </p>
+              <div class="home-work-details">
+                <h4>What's in it</h4>
+                <ul>
+                  <li>Rooms and amenities</li>
+                  <li>Scroll animations</li>
+                </ul>
+              </div>
+              <div class="home-work-stack">
+                <h4>Built with</h4>
+                <ul>
+                  <li>React</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+              <div class="home-work-actions">
+                <a
+                  class="home-work-live"
+                  href="https://serena-park-resort-website.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open the site
+                  <i
+                    class="fas fa-arrow-up-right-from-square"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article class="home-work-card">
+            <a
+              class="home-work-image"
+              href="https://resort-seven-puce.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit ARANYA, an Indian heritage resort experience"
+            >
+              <img
+                src="images/project3.png"
+                alt="ARANYA Indian heritage resort website project preview"
+                loading="lazy"
+              />
+            </a>
+            <div class="home-work-copy">
+              <p class="home-work-category">
+                HOSPITALITY <span>·</span> 3D RESORT WEBSITE
+              </p>
+              <h3>ARANYA</h3>
+              <p>
+                A heritage resort concept with a 3D scene running in the
+                browser. The heaviest thing we've built, and the one we're
+                proudest of.
+              </p>
+              <div class="home-work-details">
+                <h4>What's in it</h4>
+                <ul>
+                  <li>3D scene in the browser</li>
+                  <li>Heritage visual direction</li>
+                </ul>
+              </div>
+              <div class="home-work-stack">
+                <h4>Built with</h4>
+                <ul>
+                  <li>React</li>
+                  <li>Three.js</li>
+                </ul>
+              </div>
+              <div class="home-work-actions">
+                <a
+                  class="home-work-live"
+                  href="https://resort-seven-puce.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open the site
+                  <i
+                    class="fas fa-arrow-up-right-from-square"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <a
+          class="btn btn-primary home-work-all-button"
+          href="pages/html/work/work.html"
+          >See all six projects
+          <i class="fas fa-arrow-right" aria-hidden="true"></i
+        ></a>
+      </div>
     </section>
-
-    <section class="section home-testimonials-section" id="client-feedback" aria-labelledby="client-feedback-title">
-        <div class="container">
-            <div class="home-testimonials-heading">
-                <div>
-                    <p class="home-eyebrow">CLIENT FEEDBACK &amp; EXPERIENCE</p>
-                    <h2 class="home-section-title" id="client-feedback-title">What Our Clients Say</h2>
-                    <p class="home-section-intro">We’ll share genuine client feedback here as it’s approved for publication.</p>
-                </div>
-                <a class="home-text-link" href="pages/html/testimonials/testimonials.html">How we work with clients <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <p class="home-testimonials-notice"><i class="fas fa-circle-info" aria-hidden="true"></i> Sample copy below is illustrative only—not real client feedback. Replace it with genuine, approved testimonials before publishing.</p>
-            <div class="home-testimonials-track" aria-label="Illustrative client testimonial examples">
-                <div class="home-testimonials-group">
-                    <article class="home-testimonial-card">
-                        <span class="home-sample-label">EXAMPLE COPY</span>
-                        <span class="home-quote-mark" aria-hidden="true">“</span>
-                        <blockquote>They took time to understand what we needed and helped us turn the idea into a clear project plan.</blockquote>
-                        <div class="home-testimonial-attribution"><span class="home-sample-avatar" aria-hidden="true">EX</span><p><strong>Sample testimonial</strong><span>Replace with an approved client name and role</span></p></div>
-                    </article>
-                    <article class="home-testimonial-card">
-                        <span class="home-sample-label">EXAMPLE COPY</span>
-                        <span class="home-quote-mark" aria-hidden="true">“</span>
-                        <blockquote>Communication was easy to follow, and we knew what was happening at each stage of the work.</blockquote>
-                        <div class="home-testimonial-attribution"><span class="home-sample-avatar" aria-hidden="true">EX</span><p><strong>Sample testimonial</strong><span>Replace with an approved client name and role</span></p></div>
-                    </article>
-                    <article class="home-testimonial-card">
-                        <span class="home-sample-label">EXAMPLE COPY</span>
-                        <span class="home-quote-mark" aria-hidden="true">“</span>
-                        <blockquote>The handover made it clear what had been delivered and what options we had for next steps.</blockquote>
-                        <div class="home-testimonial-attribution"><span class="home-sample-avatar" aria-hidden="true">EX</span><p><strong>Sample testimonial</strong><span>Replace with an approved client name and role</span></p></div>
-                    </article>
-                </div>
-                <div class="home-testimonials-group" aria-hidden="true">
-                    <article class="home-testimonial-card">
-                        <span class="home-sample-label">EXAMPLE COPY</span>
-                        <span class="home-quote-mark">“</span>
-                        <blockquote>They took time to understand what we needed and helped us turn the idea into a clear project plan.</blockquote>
-                        <div class="home-testimonial-attribution"><span class="home-sample-avatar">EX</span><p><strong>Sample testimonial</strong><span>Replace with an approved client name and role</span></p></div>
-                    </article>
-                    <article class="home-testimonial-card">
-                        <span class="home-sample-label">EXAMPLE COPY</span>
-                        <span class="home-quote-mark">“</span>
-                        <blockquote>Communication was easy to follow, and we knew what was happening at each stage of the work.</blockquote>
-                        <div class="home-testimonial-attribution"><span class="home-sample-avatar">EX</span><p><strong>Sample testimonial</strong><span>Replace with an approved client name and role</span></p></div>
-                    </article>
-                    <article class="home-testimonial-card">
-                        <span class="home-sample-label">EXAMPLE COPY</span>
-                        <span class="home-quote-mark">“</span>
-                        <blockquote>The handover made it clear what had been delivered and what options we had for next steps.</blockquote>
-                        <div class="home-testimonial-attribution"><span class="home-sample-avatar">EX</span><p><strong>Sample testimonial</strong><span>Replace with an approved client name and role</span></p></div>
-                    </article>
-                </div>
-            </div>
-            <div class="home-testimonials-footer"><a class="home-text-link" href="pages/html/work/work.html">Explore selected projects instead <i class="fas fa-arrow-right"></i></a></div>
+    <section
+      class="section home-process-section"
+      id="how-we-work"
+      aria-labelledby="home-process-title"
+    >
+      <div class="container">
+        <div class="home-section-heading">
+          <div>
+            <p class="home-eyebrow">HOW A PROJECT RUNS</p>
+            <h2 class="home-section-title" id="home-process-title">
+              What working with us actually looks like
+            </h2>
+            <p class="home-section-intro">
+              No account managers, no weekly status decks. Four steps, and you
+              know where things stand at each one.
+            </p>
+          </div>
+          <a class="home-text-link" href="pages/html/contact/contact.html"
+            >Start with a message <i class="fas fa-arrow-right"></i
+          ></a>
         </div>
+
+        <ol class="home-process-list">
+          <li class="home-process-step" data-reveal>
+            <span class="home-process-num">01</span>
+            <span class="sr-only">Step 1:</span>
+            <h3>You tell us the problem</h3>
+            <p>
+              A call or a long message is fine. What are you trying to do, who
+              is it for, and what's getting in the way today? We ask questions
+              before we quote anything.
+            </p>
+            <p class="home-process-meta">Usually 1&ndash;2 days</p>
+          </li>
+          <li class="home-process-step" data-reveal>
+            <span class="home-process-num">02</span>
+            <span class="sr-only">Step 2:</span>
+            <h3>We write the scope down</h3>
+            <p>
+              A short document: what's included, what isn't, what it costs and
+              when it lands. You read it, we change what's wrong, then we start.
+            </p>
+            <p class="home-process-meta">Fixed price, agreed up front</p>
+          </li>
+          <li class="home-process-step" data-reveal>
+            <span class="home-process-num">03</span>
+            <span class="sr-only">Step 3:</span>
+            <h3>You see it while it's being built</h3>
+            <p>
+              A staging link from week one. You can click through it any time
+              and tell us what's off &mdash; much cheaper than finding out at
+              the end.
+            </p>
+            <p class="home-process-meta">Updates every few days</p>
+          </li>
+          <li class="home-process-step" data-reveal>
+            <span class="home-process-num">04</span>
+            <span class="sr-only">Step 4:</span>
+            <h3>We hand it over properly</h3>
+            <p>
+              The repo, the hosting, the domain, the admin logins &mdash; all
+              yours. Plus 30 days of free bug fixes after launch, because
+              something always turns up.
+            </p>
+            <p class="home-process-meta">Everything in your name</p>
+          </li>
+        </ol>
+
+        <p class="home-process-note">
+          <i class="fas fa-circle-info" aria-hidden="true"></i>
+          We don't publish client quotes until the client has approved them. If
+          you want to hear from someone we've worked with, ask us and we'll
+          connect you.
+        </p>
+      </div>
     </section>
 
     <section id="about" class="section">
-        <div class="container home-about-grid">
-            <div class="home-about-copy" data-reveal>
-                <p class="home-eyebrow">ABOUT SHADOW TECHX</p>
-                <h2 class="home-section-title">An engineering-led software company built on quality and proven delivery.</h2>
-                <p>Shadow Techx is an independent digital studio founded by Ruman Jyoti Sarmah and Amlan Phukon. We work directly with people building a business, service, or new product—turning early ideas and practical needs into clear delivery plans.</p>
-                <p>We care about understandable decisions, useful design, maintainable code, and a handover that makes the next step clear.</p>
-                <a class="home-text-link" href="pages/html/about/about.html">Meet the team and our approach <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="home-principles-card" data-reveal>
-                <p class="home-eyebrow">HOW WE WORK</p>
-                <div><span>01</span><section><h3>Start with the problem</h3><p>Understand the people, goal, and constraints before settling on features.</p></section></div>
-                <div><span>02</span><section><h3>Make progress visible</h3><p>Agree milestones and review decisions as the product takes shape.</p></section></div>
-                <div><span>03</span><section><h3>Plan for handover</h3><p>Clarify access, ownership, documentation, and support in the project scope.</p></section></div>
-            </div>
+      <div class="container home-about-grid">
+        <div class="home-about-copy" data-reveal>
+          <p class="home-eyebrow">ABOUT SHADOW TECHX</p>
+          <h2 class="home-section-title">A company, not a middleman.</h2>
+          <p>
+            Shadow Techx is a technology and digital solutions company founded
+            by Ruman Jyoti Sarmah and Amlan Phukan, based in Assam, India. We
+            started it because we kept seeing businesses pay agency prices for
+            work that was made by someone they never spoke to.
+          </p>
+          <p>
+            Under the founders, our engineering, creative, AI and business teams
+            work on the same projects &mdash; so design, code and delivery don't
+            get handed between three different companies.
+          </p>
+          <a class="home-text-link" href="pages/html/about/about.html#team"
+            >Meet the team <i class="fas fa-arrow-right"></i
+          ></a>
         </div>
+        <div class="home-principles-card" data-reveal>
+          <p class="home-eyebrow">HOW WE WORK</p>
+          <div>
+            <span>01</span>
+            <section>
+              <h3>Start with the problem</h3>
+              <p>
+                Who uses it, what they're doing today, and what's actually
+                broken. Features come after that.
+              </p>
+            </section>
+          </div>
+          <div>
+            <span>02</span>
+            <section>
+              <h3>Make progress visible</h3>
+              <p>
+                A staging link you can open any time. No waiting three weeks to
+                find out what we built.
+              </p>
+            </section>
+          </div>
+          <div>
+            <span>03</span>
+            <section>
+              <h3>Plan for handover</h3>
+              <p>
+                Repo, hosting, domain, logins &mdash; all in your name before we
+                call it finished.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="pricing" class="section pricing-section">
-        <div class="container">
-            <p class="home-eyebrow" data-reveal>WEBSITE PROJECTS</p>
-            <h2 class="home-section-title" data-reveal>Clear starting points. Scope confirmed together.</h2>
-            <p class="home-section-intro" data-reveal>These website packages show the current starting tiers. Final features, timelines, and pricing are confirmed against your requirements before work begins.</p>
-            <div class="pricing-grid">
-                <!-- STARTER -->
-                <div class="price-card" data-reveal>
-                    <div class="card-header">
-                        <h4>STARTER</h4>
-                        <p class="price-tag">&#8377;4,999 <span class="price-usd">$60</span></p>
-                    </div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> 1&ndash;3 Pages</li>
-                        <li><i class="fas fa-check"></i> Mobile Responsive</li>
-                        <li><i class="fas fa-check"></i> Modern UI Design</li>
-                        <li><i class="fas fa-check"></i> WhatsApp Integration</li>
-                        <li><i class="fas fa-check"></i> Contact Form</li>
-                        <li><i class="fas fa-check"></i> Social Media Integration</li>
-                        <li><i class="fas fa-check"></i> Basic SEO</li>
-                        <li><i class="fas fa-check"></i> 1 Revision</li>
-                    </ul>
-                    <a href="pages/html/contact/contact.html" class="btn btn-secondary plan-btn">GET STARTED <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <!-- BUSINESS (Most Popular) -->
-                <div class="price-card featured" data-reveal>
-                    <span class="plan-badge">MOST POPULAR</span>
-                    <div class="card-header">
-                        <h4>BUSINESS</h4>
-                        <p class="price-tag">&#8377;9,999 <span class="price-usd">$120</span></p>
-                    </div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Up to 6 Pages</li>
-                        <li><i class="fas fa-check"></i> Premium UI/UX</li>
-                        <li><i class="fas fa-check"></i> Fully Responsive</li>
-                        <li><i class="fas fa-check"></i> WhatsApp Integration</li>
-                        <li><i class="fas fa-check"></i> Contact/Lead Form</li>
-                        <li><i class="fas fa-check"></i> Google Maps Integration</li>
-                        <li><i class="fas fa-check"></i> Basic SEO</li>
-                        <li><i class="fas fa-check"></i> Smooth Animations</li>
-                        <li><i class="fas fa-check"></i> 2 Revisions</li>
-                        <li><i class="fas fa-check"></i> Deployment</li>
-                    </ul>
-                    <a href="pages/html/contact/contact.html" class="btn btn-primary plan-btn">GET STARTED <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <!-- PROFESSIONAL -->
-                <div class="price-card" data-reveal>
-                    <div class="card-header">
-                        <h4>PROFESSIONAL</h4>
-                        <p class="price-tag">&#8377;17,999 <span class="price-usd">$215</span></p>
-                    </div>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Up to 10 Pages</li>
-                        <li><i class="fas fa-check"></i> Premium Custom Design</li>
-                        <li><i class="fas fa-check"></i> Advanced Animations</li>
-                        <li><i class="fas fa-check"></i> Multiple Forms</li>
-                        <li><i class="fas fa-check"></i> SEO Setup</li>
-                        <li><i class="fas fa-check"></i> Google Analytics</li>
-                        <li><i class="fas fa-check"></i> Performance Optimization</li>
-                        <li><i class="fas fa-check"></i> 3 Revisions</li>
-                        <li><i class="fas fa-check"></i> Deployment</li>
-                        <li><i class="fas fa-check"></i> Support</li>
-                    </ul>
-                    <a href="pages/html/contact/contact.html" class="btn btn-secondary plan-btn">GET STARTED <i class="fas fa-arrow-right"></i></a>
-                </div>
+      <div class="container">
+        <p class="home-eyebrow" data-reveal>WEBSITE PRICING</p>
+        <h2 class="home-section-title" data-reveal>What a website costs</h2>
+        <p class="home-section-intro" data-reveal>
+          These are real starting prices, not "contact us for a quote". If your
+          project needs more than a package covers, we'll say so before you pay
+          anything.
+        </p>
+        <div class="pricing-grid">
+          <!-- STARTER -->
+          <div class="price-card" data-reveal>
+            <div class="card-header">
+              <h4>STARTER</h4>
+              <p class="price-tag">
+                &#8377;4,999 <span class="price-usd">$60</span>
+              </p>
             </div>
-            <!-- Mobile-only swipe indicator dots (hidden on desktop via CSS) -->
-            <div class="pricing-dots" id="pricing-dots" aria-hidden="true"></div>
+            <ul>
+              <li><i class="fas fa-check"></i> 1&ndash;3 pages</li>
+              <li><i class="fas fa-check"></i> Works on phones</li>
+              <li>
+                <i class="fas fa-check"></i> Custom design, not a template
+              </li>
+              <li><i class="fas fa-check"></i> WhatsApp button</li>
+              <li><i class="fas fa-check"></i> Contact form to your email</li>
+              <li><i class="fas fa-check"></i> Social links</li>
+              <li><i class="fas fa-check"></i> Basic SEO setup</li>
+              <li><i class="fas fa-check"></i> 1 round of changes</li>
+            </ul>
+            <a
+              href="pages/html/contact/contact.html"
+              class="btn btn-secondary plan-btn"
+              >GET STARTED <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <!-- BUSINESS (Most Popular) -->
+          <div class="price-card featured" data-reveal>
+            <span class="plan-badge">MOST POPULAR</span>
+            <div class="card-header">
+              <h4>BUSINESS</h4>
+              <p class="price-tag">
+                &#8377;9,999 <span class="price-usd">$120</span>
+              </p>
+            </div>
+            <ul>
+              <li><i class="fas fa-check"></i> Up to 6 pages</li>
+              <li><i class="fas fa-check"></i> Design done from scratch</li>
+              <li><i class="fas fa-check"></i> Works on phones and tablets</li>
+              <li><i class="fas fa-check"></i> WhatsApp button</li>
+              <li><i class="fas fa-check"></i> Contact form to your email</li>
+              <li><i class="fas fa-check"></i> Google Maps embed</li>
+              <li><i class="fas fa-check"></i> Basic SEO setup</li>
+              <li><i class="fas fa-check"></i> Scroll animations</li>
+              <li><i class="fas fa-check"></i> 2 rounds of changes</li>
+              <li><i class="fas fa-check"></i> We put it live for you</li>
+            </ul>
+            <a
+              href="pages/html/contact/contact.html"
+              class="btn btn-primary plan-btn"
+              >GET STARTED <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <!-- PROFESSIONAL -->
+          <div class="price-card" data-reveal>
+            <div class="card-header">
+              <h4>PROFESSIONAL</h4>
+              <p class="price-tag">
+                &#8377;17,999 <span class="price-usd">$215</span>
+              </p>
+            </div>
+            <ul>
+              <li><i class="fas fa-check"></i> Up to 10 pages</li>
+              <li><i class="fas fa-check"></i> Fully custom design</li>
+              <li><i class="fas fa-check"></i> Advanced animations</li>
+              <li><i class="fas fa-check"></i> Multiple forms</li>
+              <li><i class="fas fa-check"></i> Full SEO setup</li>
+              <li><i class="fas fa-check"></i> Google Analytics</li>
+              <li><i class="fas fa-check"></i> Speed tuning</li>
+              <li><i class="fas fa-check"></i> 3 rounds of changes</li>
+              <li><i class="fas fa-check"></i> We put it live for you</li>
+              <li><i class="fas fa-check"></i> 30 days of support</li>
+            </ul>
+            <a
+              href="pages/html/contact/contact.html"
+              class="btn btn-secondary plan-btn"
+              >GET STARTED <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
         </div>
+        <!-- Mobile-only swipe indicator dots (hidden on desktop via CSS) -->
+        <div class="pricing-dots" id="pricing-dots" aria-hidden="true"></div>
+      </div>
     </section>
 
     <section id="faq" class="section faq-section">
-        <div class="container">
-            <p class="home-eyebrow" data-reveal>GOOD TO KNOW</p>
-            <h2 class="home-section-title" data-reveal>Frequently asked questions.</h2>
-            <div class="faq-container">
-                <div class="faq-item" data-reveal>
-                    <div class="faq-question">What can Shadow Techx build? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Our service areas include websites and web apps, Android and iOS apps, custom business software, desktop applications, e-commerce platforms, and AI-enabled workflows. We’ll confirm the best fit after understanding your requirements.</div>
-                </div>
-                <div class="faq-item" data-reveal>
-                    <div class="faq-question">Which technologies do you use? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">The stack depends on the product. Options may include React, Next.js, TypeScript, Node.js, PostgreSQL, Flutter, Swift, Kotlin, Electron, and relevant cloud or payment services.</div>
-                </div>
-                <div class="faq-item" data-reveal>
-                    <div class="faq-question">How are timeline and project scope decided? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">We review your goals, features, integrations, and constraints first. The proposed scope, milestones, schedule, and pricing are then agreed before implementation begins.</div>
-                </div>
-                <div class="faq-item" data-reveal>
-                    <div class="faq-question">Who owns the source code, and what happens after launch? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Source-code ownership, repository access, handover, and any maintenance or warranty support are set out in the project agreement so expectations are clear before work starts.</div>
-                </div>
-                <div class="faq-item" data-reveal>
-                    <div class="faq-question">Can you connect a new product to our existing tools? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Where suitable APIs or integration options are available, we can assess connecting your product to existing systems and third-party services as part of the project scope.</div>
-                </div>
+      <div class="container">
+        <p class="home-eyebrow" data-reveal>GOOD TO KNOW</p>
+        <h2 class="home-section-title" data-reveal>
+          Questions people actually ask
+        </h2>
+        <div class="faq-container">
+          <div class="faq-item" data-reveal>
+            <div class="faq-question">
+              What can you actually build? <i class="fas fa-plus"></i>
             </div>
+            <div class="faq-answer">
+              Websites, web apps, Android and iOS apps, internal tools and
+              dashboards, online stores, desktop software, and small AI features
+              like document search. If it's outside that, we'll tell you instead
+              of pretending.
+            </div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <div class="faq-question">
+              What do you build with? <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              Mostly React, Next.js, TypeScript and Node.js, with PostgreSQL or
+              MongoDB behind them. Flutter or React Native for mobile, Electron
+              for desktop. We pick what fits the project, not what's trending.
+            </div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <div class="faq-question">
+              How long does a project take? <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              A 3&ndash;6 page website is usually 2&ndash;3 weeks. A web app or
+              mobile app is 6&ndash;12 weeks depending on scope. We give you a
+              date in writing before we start, and we tell you early if it's
+              going to slip.
+            </div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <div class="faq-question">
+              Who owns the code after launch? <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              You do. The GitHub repo, the hosting account, the domain &mdash;
+              all transferred to you at handover. You can keep working with us
+              or take it to any other developer. No lock-in.
+            </div>
+          </div>
+          <div class="faq-item" data-reveal>
+            <div class="faq-question">
+              Can you connect to the tools we already use?
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="faq-answer">
+              Usually yes &mdash; if the tool has an API or a webhook, we can
+              connect to it. That covers things like payment gateways, CRMs,
+              Google Sheets, WhatsApp Business and most accounting software.
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="section home-cta-section">
-        <div class="container">
-            <div class="home-cta-card">
-                <div><p class="home-eyebrow">YOUR NEXT STEP</p><h2>Have a project in mind?</h2><p>Share what you’re planning. We’ll use your brief to understand the goal and discuss a sensible next step.</p></div>
-                <a href="pages/html/contact/contact.html" class="btn btn-primary">Launch a consultation <i class="fas fa-arrow-right"></i></a>
-            </div>
+      <div class="container">
+        <div class="home-cta-card">
+          <div>
+            <p class="home-eyebrow">YOUR NEXT STEP</p>
+            <h2>Got something in mind?</h2>
+            <p>
+              Send us a paragraph about it. We'll reply within a day with honest
+              thoughts &mdash; even if the honest answer is "you don't need
+              this".
+            </p>
+          </div>
+          <a href="pages/html/contact/contact.html" class="btn btn-primary"
+            >Tell us about it <i class="fas fa-arrow-right"></i
+          ></a>
         </div>
+      </div>
     </section>
 
     <footer class="main-footer">
-        <div class="container">
-            <section class="footer-cta" aria-labelledby="footer-cta-title">
-                <div>
-                    <p class="footer-eyebrow">Shadow Techx · Project inquiries</p>
-                    <h2 id="footer-cta-title">Ready to build something useful?</h2>
-                    <p>Tell us what you are working on. We can talk through your goals, scope, and practical next steps.</p>
-                </div>
-                <a class="footer-cta-link" href="pages/html/contact/contact.html">Start a project inquiry <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
-            </section>
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a class="footer-wordmark" href="pages/html/home/home.html">SHADOW <span>TECHX</span></a>
-                    <p>Independent digital product design and engineering, from the first conversation through delivery.</p>
-                </div>
-                <div>
-                    <h2>Our services</h2>
-                    <ul>
-                        <li><a href="pages/html/website-development/website-development.html">Website development</a></li>
-                        <li><a href="pages/html/mobile-app-development/mobile-app-development.html">Mobile app development</a></li>
-                        <li><a href="pages/html/custom-software-development/custom-software-development.html">Custom software</a></li>
-                        <li><a href="pages/html/desktop-software-development/desktop-software-development.html">Desktop software</a></li>
-                        <li><a href="pages/html/ecommerce-development/ecommerce-development.html">E-commerce</a></li>
-                        <li><a href="pages/html/ai-solutions/ai-solutions.html">AI solutions</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Explore</h2>
-                    <ul>
-                        <li><a href="pages/html/home/home.html">Home</a></li>
-                        <li><a href="pages/html/work/work.html">Work</a></li>
-                        <li><a href="pages/html/about/about.html">About</a></li>
-                        <li><a href="pages/html/insights/insights.html">Insights</a></li>
-                        <li><a href="pages/html/testimonials/testimonials.html">Client experience</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Connect</h2>
-                    <ul>
-                        <li><a href="pages/html/contact/contact.html">Project inquiries</a></li>
-                    </ul>
-                    <div class="footer-social">
-                        <a href="https://github.com/Ruman-Jyoti-Sarmah" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/shadow_techx/" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    </div>
-                </div>
+      <div class="container">
+        <section class="footer-cta" aria-labelledby="footer-cta-title">
+          <div>
+            <p class="footer-eyebrow">Shadow Techx · Technology &amp; digital solutions</p>
+            <h2 id="footer-cta-title">Tell us what you're building</h2>
+            <p>
+              One message is enough to start. We'll come back with questions, a
+              rough price, and a realistic timeline.
+            </p>
+          </div>
+          <a class="footer-cta-link" href="pages/html/contact/contact.html"
+            >Send us a message
+            <i class="fas fa-arrow-right" aria-hidden="true"></i
+          ></a>
+        </section>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="footer-wordmark" href="pages/html/home/home.html"
+              >SHADOW <span>TECHX</span></a
+            >
+            <p>
+              Technology &amp; digital solutions from Assam, India. Engineering,
+              creative, AI and business teams under one roof.
+            </p>
+          </div>
+          <div>
+            <h2>Our services</h2>
+            <ul>
+              <li>
+                <a
+                  href="pages/html/website-development/website-development.html"
+                  >Website development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pages/html/mobile-app-development/mobile-app-development.html"
+                  >Mobile app development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pages/html/custom-software-development/custom-software-development.html"
+                  >Custom software</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pages/html/desktop-software-development/desktop-software-development.html"
+                  >Desktop software</a
+                >
+              </li>
+              <li>
+                <a
+                  href="pages/html/ecommerce-development/ecommerce-development.html"
+                  >E-commerce</a
+                >
+              </li>
+              <li>
+                <a href="pages/html/ai-solutions/ai-solutions.html"
+                  >AI solutions</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Explore</h2>
+            <ul>
+              <li><a href="pages/html/home/home.html">Home</a></li>
+              <li><a href="pages/html/work/work.html">Work</a></li>
+              <li><a href="pages/html/about/about.html">About</a></li>
+              <li><a href="pages/html/insights/insights.html">Insights</a></li>
+              <li>
+                <a href="pages/html/testimonials/testimonials.html"
+                  >Client experience</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Connect</h2>
+            <ul>
+              <li>
+                <a href="pages/html/contact/contact.html">Project inquiries</a>
+              </li>
+            </ul>
+            <div class="footer-social">
+              <a
+                href="https://github.com/Ruman-Jyoti-Sarmah"
+                aria-label="GitHub"
+                ><i class="fab fa-github" aria-hidden="true"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/shadow_techx/"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram" aria-hidden="true"></i
+              ></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Shadow Techx. All rights reserved.</p>
-                <div class="footer-legal"><a href="pages/html/privacy-policy/privacy-policy.html">Privacy</a><a href="pages/html/terms-of-service/terms-of-service.html">Terms</a></div>
-            </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Shadow Techx. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="pages/html/privacy-policy/privacy-policy.html">Privacy</a
+            ><a href="pages/html/terms-of-service/terms-of-service.html"
+              >Terms</a
+            >
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- EmailJS SDK (frontend-only email delivery) -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="module" src="pages/js/home/home.js"></script>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="3d-bg.js"></script>
-</body>
+  </body>
 </html>

@@ -17,58 +17,73 @@ const workUrl = assetUrl("../pages/html/work/work.html");
 const aboutUrl = assetUrl("../pages/html/about/about.html");
 
 const serviceDetails = [
-  ["website", "website development", "Responsive websites and web applications, from company sites and landing pages to portals and dashboards.", assetUrl("../pages/html/website-development/website-development.html")],
-  ["mobile", "mobile app development", "Android and iOS apps, built natively or with a shared cross-platform codebase when that fits the product.", assetUrl("../pages/html/mobile-app-development/mobile-app-development.html")],
-  ["custom software", "custom software", "Purpose-built business workflows, applications, admin panels, and integrations.", assetUrl("../pages/html/custom-software-development/custom-software-development.html")],
-  ["desktop", "desktop applications", "Desktop tools for Windows, macOS, and Linux, planned around the way people use them.", assetUrl("../pages/html/desktop-software-development/desktop-software-development.html")],
-  ["e-commerce", "e-commerce", "Online storefronts, product catalogues, checkout experiences, and business integrations.", assetUrl("../pages/html/ecommerce-development/ecommerce-development.html")],
-  ["ai", "applied AI", "Practical AI features such as knowledge retrieval, internal assistants, and task automation—with data handling considered up front.", assetUrl("../pages/html/ai-solutions/ai-solutions.html")]
+  ["website", "websites", "Business sites, landing pages and web apps. Fast, works on phones, and you can edit the text yourself.", assetUrl("../pages/html/website-development/website-development.html")],
+  ["mobile", "mobile apps", "Android and iOS from one codebase, usually React Native or Flutter. We also handle the store submissions.", assetUrl("../pages/html/mobile-app-development/mobile-app-development.html")],
+  ["custom software", "custom software", "Admin panels, stock systems, billing, staff tools. Basically the proper version of whatever spreadsheet you're using now.", assetUrl("../pages/html/custom-software-development/custom-software-development.html")],
+  ["desktop", "desktop apps", "For work that needs the actual machine: files on disk, printers, scanners, barcode readers, or no internet.", assetUrl("../pages/html/desktop-software-development/desktop-software-development.html")],
+  ["e-commerce", "online stores", "Catalogue, cart, checkout and payments with Razorpay, Stripe or UPI. Including the boring parts like order emails and stock.", assetUrl("../pages/html/ecommerce-development/ecommerce-development.html")],
+  ["ai", "AI features", "Small, specific jobs: search your documents, draft routine replies, sort messages. We only add it where it saves real time.", assetUrl("../pages/html/ai-solutions/ai-solutions.html")]
 ];
 
 const quickAnswers = [
   {
     matches: /\b(hi|hello|hey|good morning|good afternoon|good evening)\b/i,
-    text: "Hello! 👋 I can help you explore our services, discuss how a project starts, or find the right next step. What are you thinking of building?"
+    text: "Hey! This is a small bot that answers the usual questions \u2014 the actual team is Ruman, Amlan and the Shadow Techx crew. What are you trying to build?"
   },
   {
     matches: /\b(service|services|what do you build|what do you offer|capabilit)\b/i,
-    text: "Shadow Techx builds responsive websites and web applications, Android and iOS apps, custom business software, desktop apps, e-commerce platforms, and practical AI features. Tell me what you have in mind and I can point you to the closest fit.",
-    link: ["Explore all services", servicesUrl]
+    text: "Six things: websites, mobile apps, custom software, desktop apps, online stores, and small AI features. Most projects end up being one of the first three.",
+    link: ["See all six", servicesUrl]
   },
   {
     matches: /\b(price|pricing|cost|budget|quote|how much|rate|estimate)\b/i,
-    text: "Project cost depends on the scope, features, platforms, integrations, and timeline, so we don’t quote a one-size-fits-all price here. Share a little about what you need and the team can discuss a suitable scope and estimate with you.",
-    link: ["Discuss your project", projectUrl]
+    text: "Websites start at \u20b94,999 for 1\u20133 pages, \u20b99,999 for up to 6, and \u20b917,999 for up to 10. Apps and custom software get quoted per project \u2014 we need to know the scope first, and we don't guess.",
+    link: ["See the website packages", assetUrl("../pages/html/home/home.html#pricing")]
   },
   {
     matches: /\b(mobile|android|ios|iphone|app development|app build|application)\b/i,
-    text: "Yes. Shadow Techx builds mobile apps for Android and iOS. A project can use native development or a shared cross-platform codebase, depending on the product and its requirements.",
-    link: ["Explore mobile app development", serviceDetails[1][3]]
+    text: "Yes. Android and iOS from one codebase, usually React Native or Flutter. Cheaper to build and cheaper to maintain than two separate apps.",
+    link: ["More on mobile apps", serviceDetails[1][3]]
+  },
+  {
+    matches: /\b(how long|timeline|deadline|when can|how quickly|duration)\b/i,
+    text: "A 3\u20136 page website is 2\u20133 weeks. A web app or mobile app is 6\u201312 weeks depending on scope. You get the date in writing before we start.",
+    link: ["Tell us your deadline", projectUrl]
   },
   {
     matches: /\b(start|begin|process|next step|work with|hire|project|consult|contact|talk)\b/i,
-    text: "You don’t need a finished specification to get started. Share the goal, who the product is for, its current stage, and any questions you have. The team can then clarify the opportunity and discuss practical next steps.",
-    link: ["Start a project inquiry", projectUrl]
+    text: "Send us a paragraph. That's genuinely enough \u2014 no brief or spec needed. We'll reply within a working day with questions and a rough price.",
+    link: ["Start a project", projectUrl]
   },
   {
-    matches: /\b(portfolio|work|project examples|case stud)\b/i,
-    text: "You can browse selected Shadow Techx projects on the work page. If you have a similar idea, include it in a project inquiry and the team can discuss what may fit.",
-    link: ["See selected work", workUrl]
+    matches: /\b(own|ownership|source code|the code|repo|github|lock in|lock-in)\b/i,
+    text: "You own everything at handover: the repo, the hosting, the domain, the logins. If you want to move to another developer later, we'll help with the transfer instead of making it hard.",
+    link: ["Ask us about it", projectUrl]
+  },
+  {
+    matches: /\b(portfolio|work|project examples|case stud|example)\b/i,
+    text: "Six live sites on the work page \u2014 an online store, three resort sites, a car dealership and a restaurant. All clickable, nothing mocked up. There's also a 3D one if you want to see what the creative team can do.",
+    link: ["See the live projects", workUrl]
   },
   {
     matches: /\b(team|founder|founders|who are you|about shadow|about you)\b/i,
-    text: "Shadow Techx is an independent digital product team founded by Ruman Jyoti Sarmah and Amlan Phukan. The founders work directly with clients on project conversations, scope, and delivery plans.",
-    link: ["Meet the team", aboutUrl]
+    text: "Shadow Techx was founded by Ruman Jyoti Sarmah and co-founded by Amlan Phukan. Under them we have four teams: technical, creative, AI & innovation, and business & management. Ruman leads client projects; Amlan leads engineering delivery.",
+    link: ["Meet the team", aboutUrl + "#team"]
   },
   {
-    matches: /\b(email|phone|whatsapp|instagram|social|reach you|address|location)\b/i,
-    text: "The safest way to reach the team about a project is through the consultation page. You can describe your goals there without needing a finished specification.",
-    link: ["Contact Shadow Techx", projectUrl]
+    matches: /\b(where|location|based|assam|india|office)\b/i,
+    text: "We're based in Assam, India, and work with clients anywhere. Most communication happens over email and calls, and we'll do video when it helps.",
+    link: ["Tell us where you are", projectUrl]
+  },
+  {
+    matches: /\b(email|phone|whatsapp|instagram|social|reach you|address|reply)\b/i,
+    text: "The contact form goes straight to our inbox and you'll get a reply within one working day. We don't publish a phone number \u2014 too many spam calls.",
+    link: ["Send us a message", projectUrl]
   },
   {
     matches: /\b(privacy|password|secure|sensitive|data)\b/i,
-    text: "Please don’t share passwords, payment information, or other sensitive credentials in this chat. For project details, use the consultation page and share only the information needed to explain your idea.",
-    link: ["Read our privacy notice", assetUrl("../pages/html/privacy-policy/privacy-policy.html")]
+    text: "Don't put passwords or card details in this chat or the form. If a project needs access to anything, we'll ask for it properly once we've agreed to work together.",
+    link: ["Read the privacy notice", assetUrl("../pages/html/privacy-policy/privacy-policy.html")]
   }
 ];
 
@@ -163,8 +178,8 @@ function findAnswer(question) {
   }
 
   return quickAnswers.find(({ matches }) => matches.test(question)) || {
-    text: "I can help with Shadow Techx services, project costs, mobile apps, the team, or how to get started. What kind of digital product are you considering?",
-    link: ["Explore our services", servicesUrl]
+    text: "I only know the usual questions \u2014 services, prices, timelines, who we are. For anything else, message the team directly and you'll get a real answer.",
+    link: ["Message Ruman and Amlan", projectUrl]
   };
 }
 
