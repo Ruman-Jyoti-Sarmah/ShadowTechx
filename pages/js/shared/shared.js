@@ -13,6 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contact-form');
     const messageElement = document.getElementById('form-message');
 
+    // --- International phone input (intl-tel-input) ---
+    const phoneInput = document.getElementById('phone-number');
+    let iti = null;
+    if (phoneInput && typeof intlTelInput !== 'undefined') {
+        iti = intlTelInput(phoneInput, {
+            initialCountry: 'in',           // India by default (+91)
+            preferredCountries: ['in', 'us', 'gb', 'ae', 'ca', 'au', 'de'],
+            separateDialCode: false,
+            utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js',
+        });
+    }
+
     // FAQ accordion functionality
     const faqItems = document.querySelectorAll('.faq-item');
 
@@ -53,20 +65,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const restoreButton = () => {
             submitButton.disabled = false;
             submitButton.dataset.sending = 'false';
-            submitButton.textContent = 'Launch Consultation';
+            submitButton.textContent = 'Send us the message';
         };
 
         // Collect form data — keys MUST match the variables used in the
         // EmailJS template: {{name}}, {{email}}, {{phone}}, {{message}}, {{time}}
         const websiteName = form.querySelector('#website-name').value.trim();
+        const phoneInputEl = form.querySelector('#phone-number');
+        let phoneValue = '';
+        if (phoneInputEl && iti) {
+            phoneValue = iti.getNumber();   // E.164 format (e.g. +919876543210) — empty string if no number entered
+        }
         const formData = {
             name: form.querySelector('#full-name').value.trim(),
             email: form.querySelector('#professional-email').value.trim(),
-            phone: form.querySelector('#phone-number') ? form.querySelector('#phone-number').value.trim() : '',
+            phone: phoneValue,
             message: (websiteName ? 'Website/App: ' + websiteName + '\n\n' : '') +
                      form.querySelector('#project-details').value.trim(),
             time: new Date().toLocaleString()
         };
+
+        // Consent validation — must be checked before submission
+        const consentCheckbox = form.querySelector('#privacy-consent');
+        if (!consentCheckbox.checked) {
+            showMessage('Please agree to the Privacy Policy before sending your message.', 'error');
+            restoreButton();
+            return;
+        }
 
         // Client-side validation
         const missing = [];
@@ -113,13 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
         submitButton.dataset.sending = 'true';
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
-
-        // --- TEMPORARY DEBUG LOGGING (remove once the form works) ---
-        console.log('[EmailJS DEBUG] serviceId  =', JSON.stringify(EMAILJS_CONFIG.serviceId));
-        console.log('[EmailJS DEBUG] templateId =', JSON.stringify(EMAILJS_CONFIG.templateId));
-        console.log('[EmailJS DEBUG] publicKey present =', Boolean(EMAILJS_CONFIG.publicKey), '(length:', (EMAILJS_CONFIG.publicKey || '').length + ')');
-        console.log('[EmailJS DEBUG] template param keys =', Object.keys(formData));
-        console.log('[EmailJS DEBUG] EmailJS SDK version =', (emailjs && emailjs.version) ? emailjs.version : 'unknown');
 
         try {
             await emailjs.send(

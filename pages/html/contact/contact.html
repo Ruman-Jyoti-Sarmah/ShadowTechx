@@ -9,6 +9,7 @@
     <title>Start a project | Shadow Techx</title>
     <link rel="stylesheet" href="pages/css/contact/contact.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -32,6 +33,14 @@
             <label for="website-name">What are you building? *</label><input id="website-name" type="text" name="subject" placeholder="e.g. a booking site for our hotel" required />
             <label for="phone-number">Phone (optional)</label><input id="phone-number" type="tel" name="phone_number" autocomplete="tel" placeholder="Phone number" />
             <label class="full-width" for="project-details">Tell us more *</label><textarea class="full-width" id="project-details" name="message" maxlength="1200" placeholder="What is the problem, who is it for, and do you have a budget or deadline in mind?" required></textarea>
+
+            <div class="consent-group full-width">
+              <input type="checkbox" id="privacy-consent" name="privacy_consent" required />
+              <label for="privacy-consent">
+                I agree to the collection and use of my personal information to respond to my enquiry, as explained in the <a href="pages/html/privacy-policy/privacy-policy.html">Privacy Policy</a>.
+              </label>
+            </div>
+
             <button type="submit" class="btn btn-primary full-width">Send us the message <i class="fas fa-arrow-right"></i></button>
             <p id="form-message" class="form-message-hidden full-width" role="status" aria-live="polite"></p>
           </form>
@@ -50,6 +59,7 @@
       <div class="footer-bottom"><p>&copy; 2026 Shadow Techx. All rights reserved.</p><div class="footer-legal"><a href="pages/html/privacy-policy/privacy-policy.html">Privacy</a><a href="pages/html/terms-of-service/terms-of-service.html">Terms</a></div></div>
     </div></footer>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
     <script type="module" src="pages/js/contact/contact.js"></script>
 
 
