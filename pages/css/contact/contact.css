@@ -5,3 +5,168 @@
 @import url("../../../css/consultation.css");
 @import url("../../../css/navbar.css");
 @import url("../../../css/site-footer.css");
+
+/* ============================================================
+   Privacy consent checkbox — contact form
+   ============================================================ */
+.consent-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 18px 0 0 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.consent-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: #2563eb;
+}
+
+.consent-group label {
+  font-weight: 500;
+  color: #475569;
+  cursor: pointer;
+  user-select: none;
+}
+
+.consent-group label a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.consent-group label a:hover {
+  text-decoration-color: #2563eb;
+}
+
+/* ============================================================
+   International phone input (intl-tel-input) styling
+   ============================================================ */
+.iti {
+  width: 100%;
+}
+
+.iti__flag-container {
+  background-color: #fff;
+  border: 1px solid #cdd6e4;
+  border-right: 0;
+  border-radius: 12px 0 0 12px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.iti__country-list {
+  border: 1px solid #cdd6e4;
+  border-radius: 12px;
+  box-shadow: 0 10px 34px -14px rgba(17, 24, 39, 0.14);
+  background-color: #fff;
+  z-index: 2000;
+  margin-top: 6px;
+}
+
+.iti__country {
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  color: #475569;
+  cursor: pointer;
+}
+
+.iti__country.iti__highlight {
+  background-color: rgba(37, 99, 235, 0.08);
+  color: #111827;
+}
+
+.iti__search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 0;
+  border-bottom: 1px solid #cdd6e4;
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.iti__search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+#phone-number {
+  border: 1px solid #cdd6e4;
+  border-left: 0;
+  border-radius: 0 12px 12px 0;
+  height: 50px;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  color: #111827;
+  font-family: inherit;
+}
+
+#phone-number:focus {
+  border-color: #3b82f6;
+  outline: 3px solid rgba(37, 99, 235, 0.12);
+}
+
+/* ============================================================
+   Form validation error styling
+   ============================================================ */
+.form-message-error {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  grid-column: 1 / -1;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 0.94rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ============================================================
+   Mobile layout for contact form
+   ============================================================ */
+@media (max-width: 768px) {
+  .consent-group {
+    font-size: 0.85rem;
+    margin: 14px 0;
+  }
+
+  .consent-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+  }
+
+  .iti__flag-container {
+    height: 46px;
+  }
+
+  #phone-number {
+    height: 46px;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .consent-group {
+    font-size: 0.825rem;
+  }
+
+  .iti__flag-container {
+    height: 44px;
+  }
+
+  #phone-number {
+    height: 44px;
+    padding: 11px 14px;
+    font-size: 0.875rem;
+  }
+}
